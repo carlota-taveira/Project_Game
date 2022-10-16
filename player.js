@@ -10,7 +10,7 @@ class Player {
         }
 
         draw() {
-          this.img.src = "/docs/assets/images/basket-cart-icon-27.png";
+          this.img.src = "/docs/assets/images/icons8-supermarket-64.png";
           this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
         }
         top() {
@@ -26,15 +26,23 @@ class Player {
           return this.x + this.w;
         }
       
-        crashWith(obstacle) {
+        crashWith(obstacles) {
           return !(
-            this.bottom() < obstacle.top() ||
-            this.top() > obstacle.bottom() ||
-            this.right() < obstacle.left() ||
-            this.left() > obstacle.right()
+            this.bottom() < obstacles.top() ||
+            this.top() > obstacles.bottom() ||
+            this.right() < obstacles.left() ||
+            this.left() > obstacles.right()
           );
         }
-      }
+        colect (selectedObs1) {
+        return !(
+            this.bottom() < selectedObs1.top() ||
+            this.top() > selectedObs1.bottom() ||
+            this.right() < selectedObs1.left() ||
+            this.left() > selectedObs1.right()
+          );
+        }
+    }
       class Controls {
         constructor(icon) {
           this.icon = icon;
