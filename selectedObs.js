@@ -6,12 +6,14 @@ class selectedObs {
       this.w = 50;
       this.h = 50;
       this.img = new Image();
-      this.selectedImages = ["/docs/assets/images/icons8-potato-48.png",
-    "/docs/assets/images/icons8-pizza-48.png",
-    "/docs/assets/images/icons8-spinach-48.png",
-    "/docs/assets/images/icons8-sweet-banana-48.png"]
-      this.selectedFood = this.selectedImages[level]
-      
+      this.selectedImages = ["/docs/assets/images/icons8-broccoli-48.png",
+    "/docs/assets/images/icons8-bread-48.png",
+    "/docs/assets/images/icons8-potato-48-removebg-preview.png",
+    "/docs/assets/images/icons8-noodles-48.png",
+    "/docs/assets/images/icons8-rice-bowl-48.png",
+    "docs/assets/images/icons8-spinach-48-removebg-preview.png",
+    "docs/assets/images/icons8-sweet-banana-48-removebg-preview.png"]
+      this.selectedFood = this.selectedImages[level] 
     }
   
     draw() {

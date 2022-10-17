@@ -12,6 +12,14 @@ class Game {
       this.background = new Image();
       this.controls = null;
       this.level = [0];
+      this.health = 300;
+      this.gameIsRunning = false;
+    
+    }
+
+    losingLife() {
+      this.ctx.fillStyle = "yellow"
+      this.ctx.fillRect (50, 50, this.health, 20)
     }
 
     drawBackground() {
@@ -20,20 +28,23 @@ class Game {
     }
   
     start() {
-      this.icon = new Player(325, 700, 90, 90, this.ctx);
+      this.icon = new Player(325, 700, 100, 60, this.ctx);
       this.controls = new Controls(this.icon);
       this.controls.keyboardEvents();
       this.intervalId = setInterval(this.update, 1000 / 60);
+      this.gameIsRunning = true;
     }
 
     update = () => {
       this.frames++;
       this.drawBackground();
       this.icon.draw();
+      this.losingLife();
       this.updateObstacles();
       this.updateSelectedObs();
       this.checkNext();
       this.checkGameOver();
+      ;
      
     };
    
@@ -70,27 +81,52 @@ class Game {
     }
   
     checkGameOver() {
-      const crashed = this.obstacles.some((obstacle) => {
-        return this.icon.crashWith(obstacle);
-      });
-  
-      if (crashed) {
-        this.stop();
+     for (let i = 0; i < this.obstacles.length; i++) {
+     if (this.icon.crashWith(this.obstacles[i])) {
+      this.obstacles.splice(i, 1) // aqui retira o obstacle da array
+      this.health -=100
+     } else if (this.health <= 0){
+      this.stop()
+     }
+     } 
       }
-    }
 
     stop() {
       clearInterval(this.intervalId);
+      let gameOverScreen = document.getElementById('game-over');
+        gameOverScreen.classList.remove('hidden')
+      this.gameIsRunning = false;
     }
   }
 
+  let game;
   window.onload = () => {
+    //Start Button
     document.getElementById('start-button').onclick = () => {
-      startGame();
+      if(!game){
+        let startScreen = document.getElementById('start-screen');
+        startScreen.classList.add('hidden')
+        startGame();
+      }
+    };
+    // restart button
+    document.getElementById('restart-button').onclick = () => {
+      if(game && !game.gameIsRunning){
+        let gameOverScreen = document.getElementById('game-over');
+        gameOverScreen.classList.add('hidden')
+        startGame();
+      }
     };
   
     function startGame() {
-      let game = new Game();
+      game = new Game();
       game.start();
     }
   };
+
+ //azer game over screen with background white 
+
+
+
+  // make image in photoshop with small images of icons that we are meant to catch
+  // inside class game use the draw image on top of the screen 

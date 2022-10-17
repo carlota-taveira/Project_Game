@@ -6,10 +6,11 @@ class Obs {
       this.w = 50;
       this.h = 50;
       this.img = new Image();
-      this.imagesArray = ["/docs/assets/images/icons8-crab-48 (1).png",
-      "/docs/assets/images/icons8-poultry-leg-48.png",
-      "/docs/assets/images/icons8-rack-of-lamb-48.png",
-      "/docs/assets/images/icons8-prawn-48.png"]
+      this.imagesArray = ["/docs/assets/images/icons8-ham-48.png",
+      "/docs/assets/images/icons8-crab-48__1_-removebg-preview.png",
+      "/docs/assets/images/icons8-rack-of-lamb-48-removebg-preview.png",
+      "/docs/assets/images/icons8-prawn-48-removebg-preview.png",
+      "/docs/assets/images/icons8-steak-48-removebg-preview.png"]
       this.foodImages = this.imagesArray[Math.floor(Math.random() * this.imagesArray.length)]
     }
   
