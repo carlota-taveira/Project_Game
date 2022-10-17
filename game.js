@@ -4,14 +4,14 @@ class Game {
       this.ctx = canvas.getContext('2d');
       this.icon = null;
       this.obstacles = [];
-      this.selectedObs1 = [];
-      this.selectedObs2 =[];
+      this.selectedObs = [];
       this.intervalId = null;
       this.frames = 0;
       this.width = 700;
       this.height = 800;
       this.background = new Image();
       this.controls = null;
+      this.level = [0];
     }
 
     drawBackground() {
@@ -31,42 +31,32 @@ class Game {
       this.drawBackground();
       this.icon.draw();
       this.updateObstacles();
-      this.checkGameOver();
-      this.updateSelectedObs1();
-      this.drawRectangle();
+      this.updateSelectedObs();
       this.checkNext();
+      this.checkGameOver();
+     
     };
    
-  updateSelectedObs1() {
-        for (let i = 0; i < this.selectedObs1.length; i++) {
-          this.selectedObs1[i].y += 1;
-          this.selectedObs1[i].draw();
+  updateSelectedObs() {
+        for (let i = 0; i < this.selectedObs.length; i++) {
+          this.selectedObs[i].y += 1;
+          this.selectedObs[i].draw();
         }
     
-        if (this.frames % 700 === 2) {
-          this.selectedObs1.push(new selectedObs1(this.ctx));
+        if (this.frames % 300 === 0) {
+          this.selectedObs.push(new selectedObs(this.ctx, this.level));
         }
       }
 
       checkNext () {
-        const next = this.selectedObs1.some((selectedObs1) => {
-            return this.icon.colect(selectedObs1);
+        const next = this.selectedObs.some((selectedObs) => {
+            return this.icon.colect(selectedObs);
         });
         if (next) {
-        return this.next1() 
+        this.level++;
+        this.selectedObs = []
         }
     }
-
- updateSelectedObs2() {
-        for (let i = 0; i < this.selectedObs2.length; i++) {
-          this.selectedObs2[i].y += 1;
-          this.selectedObs2[i].draw();
-        }
-    
-        if (this.frames % 700 === 2) {
-          this.selectedObs2.push(new selectedObs2(this.ctx));
-        }
-      }
     
   updateObstacles() {
       for (let i = 0; i < this.obstacles.length; i++) {
@@ -74,7 +64,7 @@ class Game {
         this.obstacles[i].draw();
       }
   
-      if (this.frames % 120 === 0) {
+      if (this.frames % 80 === 0) {
         this.obstacles.push(new Obs(this.ctx));
       }
     }
@@ -88,9 +78,6 @@ class Game {
         this.stop();
       }
     }
-    next1() { // I might have to implement some interval time just to go up on the level to find potatoes
-        requestAnimationFrame(updateCanvas); //it's not working
-      }
 
     stop() {
       clearInterval(this.intervalId);

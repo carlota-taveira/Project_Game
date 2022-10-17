@@ -34,12 +34,12 @@ class Player {
             this.left() > obstacles.right()
           );
         }
-        colect (selectedObs1) {
+        colect (selectedObs) {
         return !(
-            this.bottom() < selectedObs1.top() ||
-            this.top() > selectedObs1.bottom() ||
-            this.right() < selectedObs1.left() ||
-            this.left() > selectedObs1.right()
+            this.bottom() < selectedObs.top() ||
+            this.top() > selectedObs.bottom() ||
+            this.right() < selectedObs.left() ||
+            this.left() > selectedObs.right()
           );
         }
     }
