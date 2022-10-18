@@ -2,7 +2,24 @@
 #body {
     background-image: url(/docs/assets/images/4.png);
     background-size: cover;
-    padding-bottom: 100px;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+#canvas {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: baseline;
+}
+
+.bbody{
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
 h1 { 
@@ -12,16 +29,20 @@ h1 {
     color: black;
 }
 
-
-
 #instrutions {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-end;
+    align-items: baseline;
     padding-left: 50px;
     padding-right: 50px;
-    float: left;
     font-family: 'Minardi Collage', sans-serif;
     color: black;
     font-size: 20px;
 }
+
 
 .h2 {
     padding-left: 50px;
@@ -30,14 +51,13 @@ h1 {
 .instructions{
     padding-top: 200px;
     padding-right: 50px;
-
 }
+
 img { 
     padding-top: 50px;
     padding-left: 100px;
     width: 200px;
 }
-
 
 #restart-button {
     width: 150px;
@@ -50,9 +70,9 @@ img {
     }
 
 #start-button {
+margin-left: 1200px;
 width: 150px;
 height: 100px;
-margin-left: 1200px;
 font-family: 'Minardi Collage', sans-serif;
 font-size: 20px;
 border: none;
@@ -98,16 +118,16 @@ background: none;
    }
 
 .collect {
-    margin-right: 300px;
+    margin-right: 00px;
     float: right;
     font-size: 20px;
     font-family: 'Minardi Collage', sans-serif;
 }
 
 .imgobj {
-    margin-left: 500px;
+ 
     width: 200px;
-    float: right;
+    
 }
 
 
