@@ -11,7 +11,7 @@ class Game {
       this.height = 800;
       this.background = new Image();
       this.controls = null;
-      this.level = [0];
+      this.level = 0;
       this.health = 300;
       this.gameIsRunning = false;
     
@@ -44,20 +44,21 @@ class Game {
       this.updateSelectedObs();
       this.checkNext();
       this.checkGameOver();
-      ;
+      this.checkGameWin();
      
     };
    
   updateSelectedObs() {
         for (let i = 0; i < this.selectedObs.length; i++) {
-          this.selectedObs[i].y += 1;
+          this.selectedObs[i].y += 5;
           this.selectedObs[i].draw();
         }
     
         if (this.frames % 300 === 0) {
           this.selectedObs.push(new selectedObs(this.ctx, this.level));
         }
-      }
+      } 
+     
 
       checkNext () {
         const next = this.selectedObs.some((selectedObs) => {
@@ -66,6 +67,8 @@ class Game {
         if (next) {
         this.level++;
         this.selectedObs = []
+        } else if(this.level === 7){
+          this.stop();
         }
     }
     
@@ -94,11 +97,12 @@ class Game {
     stop() {
       clearInterval(this.intervalId);
       let gameOverScreen = document.getElementById('game-over');
-        gameOverScreen.classList.remove('hidden')
+      gameOverScreen.classList.remove('hidden')
       this.gameIsRunning = false;
     }
-  }
 
+   }
+      
   let game;
   window.onload = () => {
     //Start Button
@@ -124,7 +128,8 @@ class Game {
     }
   };
 
- //azer game over screen with background white 
+  
+ //fazer game over screen with background white 
 
 
 

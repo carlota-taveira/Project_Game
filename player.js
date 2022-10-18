@@ -8,8 +8,6 @@ class Player {
           this.ctx = ctx;
           this.img = new Image();
         }
-
-        
         draw() {
           this.img.src = "/docs/assets/images/Prancheta 8.png";
           this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
@@ -54,12 +52,12 @@ class Player {
             switch (e.code) {
               case 'ArrowLeft':
                 if (this.icon.x > 15) {
-                  this.icon.x -= 10;
+                  this.icon.x -= 50;
                 }
                 break;
               case 'ArrowRight':
                 if (this.icon.x + this.icon.w < 675) {
-                  this.icon.x += 10;
+                  this.icon.x += 50;
                 }
                 break;
             }

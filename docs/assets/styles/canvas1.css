@@ -1,17 +1,118 @@
+
+#body {
+    background-image: url(/docs/assets/images/4.png);
+    background-size: cover;
+    padding-bottom: 100px;
+}
+
+h1 { 
+    font-size: 50px;
+    font-family: 'Minardi Collage', sans-serif;
+    text-align: center;
+    color: black;
+}
+
+
+
+#instrutions {
+    padding-left: 50px;
+    padding-right: 50px;
+    float: left;
+    font-family: 'Minardi Collage', sans-serif;
+    color: black;
+    font-size: 20px;
+}
+
+.h2 {
+    padding-left: 50px;
+}
+
+.instructions{
+    padding-top: 200px;
+    padding-right: 50px;
+
+}
+img { 
+    padding-top: 50px;
+    padding-left: 100px;
+    width: 200px;
+}
+
+
+#restart-button {
+    width: 150px;
+    height: 100px;
+    margin-left: 1200px;
+    font-family: 'Minardi Collage', sans-serif;
+    font-size: 20px;
+    border: none;
+    background: none;
+    }
+
+#start-button {
+width: 150px;
+height: 100px;
+margin-left: 1200px;
+font-family: 'Minardi Collage', sans-serif;
+font-size: 20px;
+border: none;
+background: none;
+}
+
 #start-screen { 
- width: 700px;
- height: 800px;
+ width: 695px;
+ height: 795px;
  display: flex;
  align-items: center;
  justify-content: center;
- position: absolute;
-
+ position: absolute; 
+ padding-left: 20px;
+ padding-top:20px;
 }
+
+#game-over { 
+    width: 695px;
+    height: 795px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding-left: 20px;
+    padding-top:20px;
+    padding-bottom: 20px;
+    font-family: 'Minardi Collage', sans-serif;
+   }
 
 .hidden{
     display: none !important;
 }
 
+#congrats {
+    width: 700px;
+    height: 800px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+   }
+
+.collect {
+    margin-right: 300px;
+    float: right;
+    font-size: 20px;
+    font-family: 'Minardi Collage', sans-serif;
+}
+
+.imgobj {
+    margin-left: 500px;
+    width: 200px;
+    float: right;
+}
+
+
+
+   
 
 
 

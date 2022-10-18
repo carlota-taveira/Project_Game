@@ -1,27 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        @import url('http://fonts.cdnfonts.com/css/minardi');
+        </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
     <link rel="stylesheet" href = "/docs/assets/styles/canvas1.css"/>
 </head>
-<body>
-    
+<body id="body">
 
+ <h1>Shopping with a budget.</h1>
+
+ <div id="instrutions">
+    <h2 class = "story"> Storyline</h2>
+    <p>You are a student and your kitchen is empty.</p>
+    Avoid spending too much money 
+    <p>to purchase your monthly supply.</p>
+
+    <h2 class = "instructions"> Instructions</h2>
+   
+    <p>Use the right and left arrow to move your shopping car. </p>
+    <p>You can't catch the expensive items. </p>
     
+    <img class = "img" src="./docs/assets/images/arrows.png" alt="" class="arrows-img" />
+</div>
+
+<div class = "collect"> Collect the items:</div>
+<img class = "imgobj" src= "./docs/assets/images/Collect_the_7_items-removebg-preview.png"></div>
+</div>
+ 
 <div id="start-screen">
-    <button id="start-button">StartGame</button>
+    <button id="start-button">Start shopping</button>
 </div>
 
 <div id="game-over" class="hidden">
-    <button id="restart-button">Try again</button>
+    <p>Too bad, you couldn't pay your groceries.</p>
+     <button id="restart-button">Shop again</button>
+    
+</div>
+
+<div id="congrats" class="hidden">
+    <button id="restart-button">Play again.</button>
 </div>
     
-<canvas id= "canvas" width= "700px" height= "800px" 
-    style="border: 5px solid black"> 
+<canvas id= "canvas" class="myCanvas" width= "700px" height= "800px" 
+    style="border: 10px solid black"> 
 </canvas>
+
+<div>
+
+    
+</div>
 
     
 
