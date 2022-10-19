@@ -1,3 +1,6 @@
+let gameOverScreen = document.getElementById('game-over');
+let gameWinScreen = document.getElementById('game-win');
+
 class Game {
     constructor() {
       this.canvas = document.getElementById('canvas');
@@ -47,7 +50,6 @@ class Game {
       this.updateSelectedObs();
       this.checkNext();
       this.checkGameOver();
-      this.checkGameWin();
      
     };
    
@@ -63,7 +65,7 @@ class Game {
       } 
      
 
-      checkNext () {
+      checkNext() {
         const next = this.selectedObs.some((selectedObs) => {
             return this.icon.colect(selectedObs);
         });
@@ -72,12 +74,14 @@ class Game {
         this.selectedObs = []
         } else if(this.level === 7){
           this.stop();
+          gameOverScreen.classList.add('hidden');
+          gameWinScreen.classList.remove('hidden')
         }
     }
     
   updateObstacles() {
       for (let i = 0; i < this.obstacles.length; i++) {
-        this.obstacles[i].y += 1;
+        this.obstacles[i].y += 2;
         this.obstacles[i].draw();
       }
   
@@ -93,6 +97,7 @@ class Game {
       this.health -=100
      } else if (this.health <= 0){
       this.stop()
+      gameOverScreen.classList.remove('hidden');
      }
      } 
       }
@@ -108,7 +113,7 @@ class Game {
       
   let game;
   window.onload = () => {
-    //Start Button
+    
     document.getElementById('start-button').onclick = () => {
       if(!game){
         let startScreen = document.getElementById('start-screen');
@@ -116,25 +121,26 @@ class Game {
         startGame();
       }
     };
-    // restart button
+
     document.getElementById('restart-button').onclick = () => {
       if(game && !game.gameIsRunning){
-        let gameOverScreen = document.getElementById('game-over');
-        gameOverScreen.classList.add('hidden')
+        gameOverScreen.classList.add('hidden');
+        gameWinScreen.classList.add('hidden');
         startGame();
       }
     };
-  
+
+    document.getElementById('btn').onclick = () => {
+      if(game && !game.gameIsRunning){
+        gameOverScreen.classList.add('hidden');
+        gameWinScreen.classList.add('hidden');
+        startGame();
+      }
+    };
+    
     function startGame() {
       game = new Game();
       game.start();
     }
   };
 
-  
- //fazer game over screen with background white 
-
-
-
-  // make image in photoshop with small images of icons that we are meant to catch
-  // inside class game use the draw image on top of the screen 

@@ -8,29 +8,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game</title>
-    <link rel="stylesheet" href = "/docs/assets/styles/canvas1.css"/>
+    <link rel="stylesheet" href = "docs/assets/styles/canvas1.css"/>
 </head>
+
 <body id="body">
 
  <h1>Shopping with a budget.</h1>
 
  <div class = "bbody">
+
  <div id="instrutions">
     <h2 class = "story"> Storyline</h2>
-    <p>You are a student and your kitchen is empty. <br>
+    <p>You are jobless and your kitchen is empty. <br>
     Avoid spending too much money to
     <br> purchase your monthly supply.</p>
 
     <h2 class = "instructions2"> Instructions</h2>
    
     <p>Use the right and left arrow to move your <br> shopping car. 
-    You can't catch the expensive items. </p>
+    If you get 7 cheap items <br>  you're good to go. </p>
     
     <img class = "img" src="./docs/assets/images/arrows.png" alt="" class="arrows-img" />
 
-    <h2 class = "instructions2"> Budget</h2>
-
-    <img src="budget" src="./docs/assets/images/Design sem nome (1).png">
+    <div class = "coins1">
+    <h2> Budget </h2>
+    Avoid the expensive items, you can only catch up to 3. <br>
+    Keep an eye on your budget bar. </br>
+    <img class = "coins" src="./docs/assets/images/Design sem nome (1).png" alt="" class="arrows-img" />
+    </div>
 
 </div>
 
@@ -39,13 +44,17 @@
 </div>
 
 <div id="game-over" class="hidden">
-     <button id="restart-button">Shop again</button>
-     <img src="coins" src="./docs/assets/images/icons8-no-money-64.png">
-    
+    <div class="toobad">
+    Too bad. Your taste is too exquisite for your low budget. <br>
+     <button id="restart-button">Shop again</button> </br> 
+</div>
 </div>
 
-<div id="congrats" class="hidden">
-    <button id="restart-button">Play again.</button>
+<div id="game-win" class="hidden">
+    <div class="congrats">
+    Congrats. You can cook your delicious cheap meals.<br>
+    <button id="btn">Shop for next month.</button>
+    </div>
 </div>
     
 <canvas id= "canvas" class="myCanvas" width= "700px" height= "800px" 
@@ -53,19 +62,27 @@
 </canvas>
 
 <div class="right">
-    <h2>Cheap Items</h2>
+    <h2 class = "collect">Collect</h2>
+    <div class = "images">
+    <img class = "cheap" src="./docs/assets/images/icons8-broccoli-48.png"/>
+    <img class = "cheap1" src="./docs/assets/images/icons8-bread-48.png"/>
+    <img class = "cheap2" src="./docs/assets/images/icons8-potato-48-removebg-preview.png"/> 
+    <img class = "cheap3" src="./docs/assets/images/icons8-noodles-48.png"/> <br>
+    <img class = "cheap4" src="./docs/assets/images/icons8-rice-bowl-48.png"/>
+    <img class = "cheap5" src="./docs/assets/images/icons8-spinach-48-removebg-preview.png"/>
+    <img class = "cheap6" src="./docs/assets/images/icons8-sweet-banana-48-removebg-preview.png"/>
+</div>
 
-    <img class = "img" src="./docs/assets/images/arrows.png" alt="" class="arrows-img" />
-
-    <h2>Expensive Items</h2>
-
-    <img class = "img" src="./docs/assets/images/arrows.png" alt="" class="arrows-img" />
-
+   <h2 class = "avoid">Avoid these</h2>
+   <div class = "images2">
+    <img class = "exp" src="./docs/assets/images/icons8-poultry-leg-48-removebg-preview.png"/>
+    <img class = "exp1" src="./docs/assets/images/icons8-ham-48.png"/>
+    <img class = "exp2" src="./docs/assets/images/icons8-prawn-48-removebg-preview.png"/> 
+    <img class = "exp3" src="./docs/assets/images/icons8-steak-48-removebg-preview.png"/>
+    <img class = "exp4" src="./docs/assets/images/icons8-rack-of-lamb-48-removebg-preview.png"/>
 </div>
 
 </div>
-    
-
 
 <div>
     <script type="text/javascript" src="/obstacles.js"></script>
@@ -73,7 +90,6 @@
     <script type="text/javascript" src="/selectedObs.js"></script>
     <script type="text/javascript" src="/game.js"></script>
 </div>
-    
     
 </body>
 </html>

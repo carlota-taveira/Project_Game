@@ -22,18 +22,13 @@ flex-direction: row;
 flex-wrap: wrap;
 }
 
-.right {
-display:flex;
-flex-direction: column;
-flex-wrap: nowrap;
-align-items: flex-end;
-}
-
 
 h1 { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 50px;
     font-family: 'Minardi Collage', sans-serif;
-    text-align: center;
     color: black;
 }
 
@@ -56,19 +51,9 @@ h1 {
 }
 
 img { 
-    padding-top: 50px;
-    padding-left: 100px;
-    width: 200px;
+    padding-top: 20px;
+    width: 150px;
 }
-
-#restart-button {
-    width: 300px;
-    height: 100px;
-    font-family: 'Minardi Collage', sans-serif;
-    font-size: 25px;
-    border: none;
-    background: none;
-    }
 
 #start-button {
 margin-left: 1150px;
@@ -92,9 +77,8 @@ border: none;
 }
 
 #game-over { 
-    background-color: white;
-    margin-left: 577px;
-    width: 700px;
+    margin-left: 617px;
+    width: 701px;
     height: 780px;
     margin-top: 10px;
     padding-bottom: 20px;
@@ -111,27 +95,139 @@ border: none;
     display: none !important;
 }
 
-#congrats {
-    width: 700px;
-    height: 800px;
-    background-color: white;
+.toobad {
+    margin-top: 300px;
+    font-size: 20px;
+}
+
+#restart-button {
+    width: 300px;
+    height: 100px;
+    margin-left: 115px;
+    font-family: 'Minardi Collage', sans-serif;
+    font-size: 25px;
+    border: none;
+    background: none;
+    }
+
+#game-win {
+    margin-left: 617px;
+    width: 701px;
+    height: 780px;
+    margin-top: 10px;
+    padding-bottom: 20px;
     display: flex;
-    align-items: center;
+    flex-wrap: column;
     justify-content: center;
+    align-content: center;
     position: absolute;
+    font-family: 'Minardi Collage', sans-serif;
+    background-image: url(/docs/assets/images/4.png);
    }
 
+   .congrats {
+    margin-top: 300px;
+    font-size: 20px;
+}
+
+#btn {
+    width: 300px;
+    height: 100px;
+    margin-left: 115px;
+    font-family: 'Minardi Collage', sans-serif;
+    font-size: 25px;
+    border: none;
+    background: none;
+    }
+
 .collect {
-    margin-right: 00px;
-    float: right;
+    margin-right: 70px;
+
+
+
+}
+
+.coins1 {
+    padding-top: 50px;
+}
+
+.coins {
+    width: 250px;
+}
+
+.right {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-end;
     font-size: 20px;
     font-family: 'Minardi Collage', sans-serif;
+    margin-top: 20px;
+
+    }
+
+    .avoid{
+  margin-top: 160px;
+  margin-right: 100px;
+    }
+
+    .images2 {
+ margin-left: 110px;
+            }
+
+ .images {
+margin-left: 100px;
+    }
+
+.cheap {
+    width: 70px;
+}
+.cheap1 {
+    width: 70px;  
+}
+.cheap2 {
+    width: 70px;  
+}
+.cheap3 {
+    width: 70px;  
+}
+.cheap4 {
+    width: 70px;  
+}
+.cheap5 {
+    width: 70px;  
+}
+.cheap6 {
+    width: 70px;  
+}
+.cheap7 {
+    width: 70px;  
 }
 
-.imgobj {
-    width: 200px;   
+.collect{
+    margin-top: 30px;
+    margin-right: 120px;
+      }
+
+.exp {
+    width: 70px;  
 }
 
+.exp1 {
+    width: 70px;  
+}
+
+.exp2 {
+    width: 70px;  
+}
+
+.exp3 {
+    width: 70px;  
+}
+
+.exp4 {
+    width: 70px;  
+}
 
 
    
