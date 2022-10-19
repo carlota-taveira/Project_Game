@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Minardi Collage';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Minardi Collage'), url('https://fonts.cdnfonts.com/s/89280/Minardi_collage.woff') format('woff');
+}
 
 #body {
     background-image: url(/docs/assets/images/4.png);
@@ -5,7 +11,6 @@
     margin: 0px;
     padding: 0px;
 }
-
 
 .myCanvas {
     display: flex;
@@ -27,7 +32,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 50px;
+    font-size: 30px;
     font-family: 'Minardi Collage', sans-serif;
     color: black;
 }
@@ -39,28 +44,27 @@ h1 {
     justify-content: flex-start;
     align-content: flex-end;
     align-items: baseline;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
     font-family: 'Minardi Collage', sans-serif;
     color: black;
-    font-size: 20px;
 }
 
 .h2 {
-    padding-left: 50px;
+    padding-left: 30px;
 }
 
 img { 
-    padding-top: 20px;
-    width: 150px;
+    width: 120px;
 }
 
 #start-button {
-margin-left: 1150px;
-width: 300px;
+margin-bottom: 200px;
+margin-left: 540px;
+width: 200px;
 height: 100px;
+font-size: 20px;
 font-family: 'Minardi Collage', sans-serif;
-font-size: 25px;
 background: none;
 border: none;
 }
@@ -77,11 +81,10 @@ border: none;
 }
 
 #game-over { 
-    margin-left: 617px;
-    width: 701px;
-    height: 780px;
-    margin-top: 10px;
-    padding-bottom: 20px;
+    margin-top: 5px;
+    margin-left: 383px;
+    width: 500px;
+    height: 600px;
     display: flex;
     flex-wrap: column;
     justify-content: center;
@@ -96,26 +99,25 @@ border: none;
 }
 
 .toobad {
-    margin-top: 300px;
-    font-size: 20px;
+    margin-top: 280px;
+ 
 }
 
 #restart-button {
-    width: 300px;
+    width: 200px;
     height: 100px;
-    margin-left: 115px;
+    margin-left: 100px;
     font-family: 'Minardi Collage', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     border: none;
     background: none;
     }
 
 #game-win {
-    margin-left: 617px;
-    width: 701px;
-    height: 780px;
-    margin-top: 10px;
-    padding-bottom: 20px;
+    margin-top: 5px;
+    margin-left: 383px;
+    width: 500px;
+    height: 600px;
     display: flex;
     flex-wrap: column;
     justify-content: center;
@@ -126,14 +128,14 @@ border: none;
    }
 
    .congrats {
-    margin-top: 300px;
-    font-size: 20px;
+    margin-top: 280px;
+    margin-left: 10px;
 }
 
 #btn {
-    width: 300px;
-    height: 100px;
-    margin-left: 115px;
+    width: 270px;
+    height: 70px;
+    margin-left: 50px;
     font-family: 'Minardi Collage', sans-serif;
     font-size: 25px;
     border: none;
@@ -141,18 +143,15 @@ border: none;
     }
 
 .collect {
-    margin-right: 70px;
-
-
-
+    margin-right: 50px;
 }
 
 .coins1 {
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .coins {
-    width: 250px;
+    width: 180px;
 }
 
 .right {
@@ -160,48 +159,46 @@ border: none;
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: flex-end;
-    font-size: 20px;
     font-family: 'Minardi Collage', sans-serif;
-    margin-top: 20px;
-
+    margin-top: 10px;
     }
 
     .avoid{
-  margin-top: 160px;
-  margin-right: 100px;
+  margin-top: 130px;
+  margin-right: 70px;
     }
 
     .images2 {
- margin-left: 110px;
+ margin-left: 100px;
             }
 
  .images {
-margin-left: 100px;
-    }
+margin-right: 50px;    
+}
 
 .cheap {
-    width: 70px;
+    width: 40px;
 }
 .cheap1 {
-    width: 70px;  
+    width: 40px;  
 }
 .cheap2 {
-    width: 70px;  
+    width: 40px;  
 }
 .cheap3 {
-    width: 70px;  
+    width: 40px;  
 }
 .cheap4 {
-    width: 70px;  
+    width: 40px;  
 }
 .cheap5 {
-    width: 70px;  
+    width: 40px;  
 }
 .cheap6 {
-    width: 70px;  
+    width: 40px;  
 }
 .cheap7 {
-    width: 70px;  
+    width: 40px;  
 }
 
 .collect{
@@ -210,23 +207,23 @@ margin-left: 100px;
       }
 
 .exp {
-    width: 70px;  
+    width: 40px;  
 }
 
 .exp1 {
-    width: 70px;  
+    width: 40px;  
 }
 
 .exp2 {
-    width: 70px;  
+    width: 40px;  
 }
 
 .exp3 {
-    width: 70px;  
+    width: 40px;  
 }
 
 .exp4 {
-    width: 70px;  
+    width: 40px;  
 }
 
 

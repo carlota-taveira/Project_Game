@@ -10,8 +10,8 @@ class Game {
       this.selectedObs = [];
       this.intervalId = null;
       this.frames = 0;
-      this.width = 700;
-      this.height = 800;
+      this.width = 500;
+      this.height = 600;
       this.background = new Image();
       this.controls = null;
       this.level = 0;
@@ -23,9 +23,9 @@ class Game {
 
     losingLife() {
       this.ctx.fillStyle = "yellow"
-      this.ctx.fillRect (50, 50, this.health, 15)
-      this.imga.src = "/docs/assets/images/icons8-coins-64-removebg-preview.png";
-      this.ctx.drawImage(this.imga, 90, 20);
+      this.ctx.fillRect (20, 20, this.health, 10)
+      this.imga.src = "/docs/assets/images/icons8-coins-32-removebg-preview.png";
+      this.ctx.drawImage(this.imga, 5, 5);
     }
 
     drawBackground() {
@@ -34,7 +34,7 @@ class Game {
     }
   
     start() {
-      this.icon = new Player(325, 700, 100, 60, this.ctx);
+      this.icon = new Player(225, 550, 60, 40, this.ctx);
       this.controls = new Controls(this.icon);
       this.controls.keyboardEvents();
       this.intervalId = setInterval(this.update, 1000 / 60);
@@ -55,7 +55,7 @@ class Game {
    
   updateSelectedObs() {
         for (let i = 0; i < this.selectedObs.length; i++) {
-          this.selectedObs[i].y += 5;
+          this.selectedObs[i].y += 4;
           this.selectedObs[i].draw();
         }
     
@@ -72,7 +72,7 @@ class Game {
         if (next) {
         this.level++;
         this.selectedObs = []
-        } else if(this.level === 7){
+        } else if(this.level === 1){
           this.stop();
           gameOverScreen.classList.add('hidden');
           gameWinScreen.classList.remove('hidden')

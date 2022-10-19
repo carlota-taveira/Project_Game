@@ -52,11 +52,11 @@ class Player {
             switch (e.code) {
               case 'ArrowLeft':
                 if (this.icon.x > 15) {
-                  this.icon.x -= 50;
+                  this.icon.x -= 60;
                 }
                 break;
               case 'ArrowRight':
-                if (this.icon.x + this.icon.w < 675) {
+                if (this.icon.x + this.icon.w < 475) {
                   this.icon.x += 50;
                 }
                 break;

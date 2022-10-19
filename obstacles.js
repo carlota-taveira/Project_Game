@@ -1,10 +1,10 @@
 class Obs {
     constructor(ctx) {
       this.ctx = ctx;
-      this.x = Math.floor(Math.random() * 700);
+      this.x = Math.floor(Math.random() * 475);
       this.y = 0;
-      this.w = 50;
-      this.h = 50;
+      this.w = 30;
+      this.h = 30;
       this.img = new Image();
       this.imagesArray = ["/docs/assets/images/icons8-ham-48.png",
       "/docs/assets/images/icons8-crab-48__1_-removebg-preview.png",
