@@ -12,14 +12,17 @@ class Game {
       this.background = new Image();
       this.controls = null;
       this.level = 0;
-      this.health = 300;
+      this.health = 400;
       this.gameIsRunning = false;
+      this.imga = new Image ();
     
     }
 
     losingLife() {
       this.ctx.fillStyle = "yellow"
-      this.ctx.fillRect (50, 50, this.health, 20)
+      this.ctx.fillRect (50, 50, this.health, 15)
+      this.imga.src = "/docs/assets/images/icons8-coins-64-removebg-preview.png";
+      this.ctx.drawImage(this.imga, 90, 20);
     }
 
     drawBackground() {
