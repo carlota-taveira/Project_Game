@@ -1,6 +1,7 @@
 let gameOverScreen = document.getElementById('game-over');
 let gameWinScreen = document.getElementById('game-win');
 let audio = new Audio ("docs/assets/sounds/New Project.mp3")
+audio.loop = true;
 
 class Game {
     constructor() {
@@ -73,7 +74,7 @@ class Game {
         if (next) {
         this.level++;
         this.selectedObs = []
-        } else if(this.level === 1){
+        } else if(this.level === 7){
           this.stop();
           gameOverScreen.classList.add('hidden');
           gameWinScreen.classList.remove('hidden')
