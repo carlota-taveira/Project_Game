@@ -1,5 +1,6 @@
 let gameOverScreen = document.getElementById('game-over');
 let gameWinScreen = document.getElementById('game-win');
+let audio = new Audio ("docs/assets/sounds/New Project.mp3")
 
 class Game {
     constructor() {
@@ -107,6 +108,8 @@ class Game {
       let gameOverScreen = document.getElementById('game-over');
       gameOverScreen.classList.remove('hidden')
       this.gameIsRunning = false;
+      audio.pause()
+ 
     }
 
    }
@@ -119,6 +122,7 @@ class Game {
         let startScreen = document.getElementById('start-screen');
         startScreen.classList.add('hidden')
         startGame();
+        audio.play()
       }
     };
 
@@ -127,6 +131,7 @@ class Game {
         gameOverScreen.classList.add('hidden');
         gameWinScreen.classList.add('hidden');
         startGame();
+        audio.play()
       }
     };
 
@@ -135,6 +140,7 @@ class Game {
         gameOverScreen.classList.add('hidden');
         gameWinScreen.classList.add('hidden');
         startGame();
+        audio.play()
       }
     };
     
