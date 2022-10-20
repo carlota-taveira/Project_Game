@@ -6,7 +6,7 @@
 }
 
 #body {
-    background-image: url(/docs/assets/images/4.png);
+    background-image: url(docs/assets/images/4.png);
     background-size: cover;
     margin: 0px;
     padding: 0px;
@@ -91,7 +91,7 @@ border: none;
     align-content: center;
     position: absolute;
     font-family: 'Minardi Collage', sans-serif;
-    background-image: url(/docs/assets/images/4.png);
+    background-image: url(docs/assets/images/4.png);
    }
 
 .hidden{
@@ -124,7 +124,7 @@ border: none;
     align-content: center;
     position: absolute;
     font-family: 'Minardi Collage', sans-serif;
-    background-image: url(/docs/assets/images/4.png);
+    background-image: url(docs/assets/images/4.png);
    }
 
    .congrats {

@@ -24,12 +24,12 @@ class Game {
     losingLife() {
       this.ctx.fillStyle = "yellow"
       this.ctx.fillRect (20, 20, this.health, 10)
-      this.imga.src = "/docs/assets/images/icons8-coins-32-removebg-preview.png";
+      this.imga.src = "docs/assets/images/icons8-coins-32-removebg-preview.png";
       this.ctx.drawImage(this.imga, 5, 5);
     }
 
     drawBackground() {
-      this.background.src = "/docs/assets/images/background.jpeg";
+      this.background.src = "docs/assets/images/background.jpeg";
       this.ctx.drawImage(this.background, 0, 0, this.width, this.height);
     }
   

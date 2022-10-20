@@ -9,7 +9,7 @@ class Player {
           this.img = new Image();
         }
         draw() {
-          this.img.src = "/docs/assets/images/Prancheta 8.png";
+          this.img.src = "docs/assets/images/Prancheta 8.png";
           this.ctx.drawImage(this.img, this.x, this.y, this.w, this.h);
         }
         top() {
